@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.svg';
 const Footer = () => {
     return (
@@ -8,8 +9,8 @@ const Footer = () => {
             </div>
             <div>
                 <span className="footer-title">Services</span>
-                <a className="link link-hover">Branding</a>
-                <a className="link link-hover">Design</a>
+                <Link to="/login" className="link link-hover">Login</Link>
+                <Link to="/signup" className="link link-hover">Sign UP</Link>
                 <a className="link link-hover">Marketing</a>
                 <a className="link link-hover">Advertisement</a>
             </div>
