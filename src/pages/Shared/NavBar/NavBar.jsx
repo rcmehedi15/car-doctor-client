@@ -18,7 +18,7 @@ const NavBar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-xl">
+                <Link to="/" className=" normal-case text-xl">
                     <img src={logo} alt="" />
                 </Link>
             </div>
@@ -28,7 +28,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-            <button className="btn btn-outline btn-warning">Appointment</button>
+            <button className="btn border-none bg-[#FF3811] text-white">Appointment</button>
             </div>
         </div>
     );
