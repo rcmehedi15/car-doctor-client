@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { useLoaderData } from 'react-router';
 import { AuthContext } from '../../providers/AuthProvider';
+import Swal from 'sweetalert2'
 
 const BookService = () => {
     const service = useLoaderData();
@@ -26,20 +27,26 @@ const BookService = () => {
 
         console.log(booking);
 
-        // fetch('http://localhost:5000/bookings', {
-        //     method: 'POST', 
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     }, 
-        //     body: JSON.stringify(booking)
-        // })
-        // .then(res => res.json())
-        // .then(data => {
-        //     console.log(data);
-        //     if(data.insertedId){
-        //         alert('service book successfully')
-        //     }
-        // })
+       
+        fetch('http://localhost:5000/bookings', {
+            method: 'POST', 
+            headers: {
+                'content-type': 'application/json'
+            }, 
+            body: JSON.stringify(booking)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Order Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+            }
+        })
 
     }
 
@@ -64,7 +71,7 @@ const BookService = () => {
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="text" name="email" defaultValue={user?.email} placeholder="email" className="input input-bordered" />
+                        <input type="email" name="email" defaultValue={user?.email} placeholder="email" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
