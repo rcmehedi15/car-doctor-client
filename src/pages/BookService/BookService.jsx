@@ -26,20 +26,20 @@ const BookService = () => {
 
         console.log(booking);
 
-        fetch('https://car-doctor-server-smoky.vercel.app/bookings', {
-            method: 'POST', 
-            headers: {
-                'content-type': 'application/json'
-            }, 
-            body: JSON.stringify(booking)
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if(data.insertedId){
-                alert('service book successfully')
-            }
-        })
+        // fetch('http://localhost:5000/bookings', {
+        //     method: 'POST', 
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     }, 
+        //     body: JSON.stringify(booking)
+        // })
+        // .then(res => res.json())
+        // .then(data => {
+        //     console.log(data);
+        //     if(data.insertedId){
+        //         alert('service book successfully')
+        //     }
+        // })
 
     }
 
@@ -74,7 +74,7 @@ const BookService = () => {
                     </div>
                 </div>
                 <div className="form-control mt-6">
-                    <input className="btn btn-primary btn-block" type="submit" value="Order Confirm" />
+                    <input className="btn btn-primary btn-block bg-[#FF3811] text-white border-none" type="submit" value="Order Confirm" />
                 </div>
             </form>
             <div className="card-body">
