@@ -59,25 +59,25 @@ const BookService = () => {
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" defaultValue={user?.displayName} name="name" className="input input-bordered" />
+                        <input type="text" required defaultValue={user?.displayName} name="name" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Date</span>
+                            <span className="label-text" >Date</span>
                         </label>
-                        <input type="date" name="date" className="input input-bordered" />
+                        <input type="date" required name="date" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" name="email" defaultValue={user?.email} placeholder="email" className="input input-bordered" />
+                        <input type="email" required name="email" defaultValue={user?.email} placeholder="email" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Due amount</span>
                         </label>
-                        <input type="text" defaultValue={'$'+ price} className="input input-bordered" />
+                        <input type="text" required defaultValue={'$'+ price} className="input input-bordered" />
                     </div>
                 </div>
                 <div className="form-control mt-6">
