@@ -11,7 +11,7 @@ const Bookings = () => {
     const url = `http://localhost:5000/bookings/?email=${user?.email}`;
     useEffect(() => {
         fetch(url, {
-            method: 'GET', 
+            method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('car-access-token')}`
             }
@@ -19,10 +19,10 @@ const Bookings = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if(!data.error){
+                if (!data.error) {
                     setBookings(data)
                 }
-                else{
+                else {
                     // logout and then navigate
                     navigate('/');
                 }
@@ -32,7 +32,7 @@ const Bookings = () => {
     const handleDelete = id => {
         const proceed = confirm('Are You sure you want to delete');
         if (proceed) {
-            fetch(`http://localhost:5000/bookings/bookings/${id}`, {
+            fetch(`http://localhost:5000/bookings/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -42,6 +42,8 @@ const Bookings = () => {
                         alert('deleted successful');
                         const remaining = bookings.filter(booking => booking._id !== id);
                         setBookings(remaining);
+                        console.log(remaining);
+
                     }
                 })
         }
@@ -65,6 +67,7 @@ const Bookings = () => {
                     updated.status = 'confirm'
                     const newBookings = [updated, ...remaining];
                     setBookings(newBookings);
+                
                 }
             })
     }
