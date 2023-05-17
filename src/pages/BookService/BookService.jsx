@@ -2,7 +2,6 @@ import { useContext } from 'react';
 import { useLoaderData } from 'react-router';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2'
-
 const BookService = () => {
     const service = useLoaderData();
     const { title, _id, price, img } = service;
@@ -25,10 +24,8 @@ const BookService = () => {
             price: price
         }
 
-        console.log(booking);
 
-       
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://car-doctor-server-smoky.vercel.app/bookings', {
             method: 'POST', 
             headers: {
                 'content-type': 'application/json'
@@ -59,25 +56,25 @@ const BookService = () => {
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" required defaultValue={user?.displayName} name="name" className="input input-bordered" />
+                        <input required type="text" defaultValue={user?.displayName} name="name" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text" >Date</span>
+                            <span className="label-text">Date</span>
                         </label>
-                        <input type="date" required name="date" className="input input-bordered" />
+                        <input required type="date" name="date" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" required name="email" defaultValue={user?.email} placeholder="email" className="input input-bordered" />
+                        <input required type="text" name="email" defaultValue={user?.email} placeholder="email" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Due amount</span>
                         </label>
-                        <input type="text" required defaultValue={'$'+ price} className="input input-bordered" />
+                        <input required type="text" defaultValue={'$'+ price} className="input input-bordered" />
                     </div>
                 </div>
                 <div className="form-control mt-6">

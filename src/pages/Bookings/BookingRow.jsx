@@ -1,3 +1,4 @@
+
 const BookingRow = ({ booking, handleDelete, handleBookingConfirm }) => {
     const { _id, date, service, price, img, status } = booking;
 

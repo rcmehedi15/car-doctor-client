@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="footer p-10 bg-red-200 text-base-content">
             <div>
                 <img src={logo} alt="" />
-                <p>NextGEN LTD.<br />Providing reliable tech since 2023</p>
+                <p>NextGEN LTD.<br /><span>Copyright By Md Mehedi Hasan</span></p>     
             </div>
             <div>
                 <span className="footer-title">Services</span>
@@ -27,7 +27,10 @@ const Footer = () => {
                 <a className="link link-hover">Privacy policy</a>
                 <a className="link link-hover">Cookie policy</a>
             </div>
+            
         </footer>
+        
+        
     );
 };
 

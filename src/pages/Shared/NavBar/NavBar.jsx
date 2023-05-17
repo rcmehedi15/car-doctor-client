@@ -6,25 +6,25 @@ import { AuthContext } from "../../../providers/AuthProvider";
 
 const NavBar = () => {
 
-    const { user, logOut } = useContext(AuthContext);
+    const {user, logOut} = useContext(AuthContext);
+
     const handleLogOut = () => {
         logOut()
-            .then(() => {
-
-            })
-            .catch(error => console.log(error))
+        .then(() =>{
+            
+        })
+        .catch( error => console.log(error))
     }
-
 
     const navItems = <>
         <li><Link to="/">Home</Link> </li>
         <li> <Link to="/about">About</Link> </li>
-        {user?.email ? <>
+        { user?.email ?  <>
             <li><Link to="/bookings">My Bookings</Link></li>
             <li><button onClick={handleLogOut}>Log out</button></li>
-        </>
-            : <li> <Link to="/login">Login</Link> </li>
-        }
+        </> 
+        : <li> <Link to="/login">Login</Link> </li>
+       }
     </>
     return (
         <div className="navbar bg-base-100 h-28 mb-4">
@@ -37,7 +37,7 @@ const NavBar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <Link to="/" className=" normal-case text-xl">
+                <Link to="/"  className=" normal-case text-xl">
                     <img src={logo} alt="" />
                 </Link>
             </div>
@@ -47,7 +47,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className="btn border-none bg-[#FF3811] text-white">Appointment</button>
+            <button className="btn border-none bg-[#FF3811] text-white">Appointment</button>
             </div>
         </div>
     );
