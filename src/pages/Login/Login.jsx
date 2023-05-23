@@ -21,13 +21,13 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+               alert(user);
                 navigate(from, { replace: true })
 
                 
 
             })
-            .catch(error => console.log(error));
+            .catch(error => alert(error));
     }
 
     return (
