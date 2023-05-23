@@ -3,8 +3,10 @@ import img from '../../assets/images/login/login.svg'
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import useTitle from '../../Hook/useTitle';
 
 const Login = () => {
+    useTitle("Login Page")
 
     const { signIn } = useContext(AuthContext);
     const location = useLocation();

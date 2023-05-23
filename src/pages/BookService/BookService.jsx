@@ -2,7 +2,10 @@ import { useContext } from 'react';
 import { useLoaderData } from 'react-router';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2'
+import useTitle from '../../Hook/useTitle';
 const BookService = () => {
+    useTitle("Book Service")
+
     const service = useLoaderData();
     const { title, _id, price, img } = service;
     const {user} = useContext(AuthContext);

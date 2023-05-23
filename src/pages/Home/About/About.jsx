@@ -1,7 +1,9 @@
 import person from '../../../assets/images/about_us/person.jpg';
 import parts from '../../../assets/images/about_us/parts.jpg';
+import useTitle from '../../../Hook/useTitle';
 
 const About = () => {
+    useTitle("Blog")
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row">

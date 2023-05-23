@@ -3,8 +3,10 @@ import img from '../../assets/images/login/login.svg'
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import useTitle from '../../Hook/useTitle';
 
 const SignUp = () => {
+    useTitle("Register")
 
     const { createUser } = useContext(AuthContext);
 
