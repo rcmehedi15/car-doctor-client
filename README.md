@@ -20,6 +20,6 @@
 
 
 ### Main Website live Link
-- <a href="https://car-doctor-29dc3.web.app">Click Now</a> <br>
+- <a target="_blank" href="https://car-doctor-29dc3.web.app">Click Now</a> <br>
 ### Server Website live Link
-- <a href="https://car-doctor-server-kappa-seven.vercel.app">Click Now</a>
+- <a target="_blank" href="https://car-doctor-server-kappa-seven.vercel.app">Click Now</a>
